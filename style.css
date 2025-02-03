@@ -356,6 +356,9 @@ a:hover {
       margin-top: 40px;
       padding: 0 15px;
     }
+    .carousel-control-next {
+        right: 0 !important;
+    }
   }
   
 
