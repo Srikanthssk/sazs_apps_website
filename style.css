@@ -322,6 +322,9 @@ a:hover {
         padding: 20px;
         margin: 0;
     }
+    .text-content {
+        margin-top: 0px;
+      }
 
     .carousel-control-prev {
         left: -50px; /* Adjust for smaller screens */
@@ -343,8 +346,33 @@ a:hover {
         margin-top: 0px;
       }
       .text-content {
-        margin-top: 0px;
+        margin-top: 0px !important;
       }
+      .text-content {
+        padding: 0px !important;
+    }
+      .carousel-item:nth-child(2) .slide-img {
+        width: 100% !important;  /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+        display: block;
+        margin-left: -0PX !important;
+    
+    }
+      .carousel-item:nth-child(3) .slide-img {
+        width: 100% !important;  /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+        display: block;
+        margin-left: -0PX !important;
+    }
+    .carousel-item:nth-child(4) .slide-img {
+        width: 100% !important;  /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+        display: block;
+        margin-left: -0PX !important;
+    }
 }
 @media (max-width: 768px) {
     .carousel-inner {
