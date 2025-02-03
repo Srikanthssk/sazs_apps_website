@@ -219,6 +219,9 @@ a:hover {
 .central-member img {
     height: 372px;
 }
+.succeed-text {
+    color: #3E89EC !important; /* Change this to your desired color */
+}
 @media (min-width: 768px) {
 
 }
@@ -709,7 +712,7 @@ a:hover {
 .join-button {
     display: inline-block;
     background-color: #216DCE;
-    color: #fafbfc;
+    color: #fafbfc !important;
     padding: 12px 32px;
     border-radius: 25px;
     text-decoration: none;

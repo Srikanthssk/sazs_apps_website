@@ -298,7 +298,7 @@ a:hover {
   }
   
   .illustration img {
-    margin-left: 160px;
+    margin-left: 250px;
     max-width: 56%;
     height: auto;
     border-radius: 8px;
@@ -353,6 +353,10 @@ a:hover {
     margin-bottom: 20px;
     line-height: 1.3;
 }
+.effortless-text {
+    color: #3E89EC; /* Change this to your desired color */
+}
+
 
 .section-description {
     font-size: 1.2rem;
@@ -639,7 +643,7 @@ a:hover {
 .join-button {
     display: inline-block;
     background-color: #216DCE;
-    color: #fafbfc;
+    color: #fafbfc !important;
     padding: 12px 32px;
     border-radius: 25px;
     text-decoration: none;

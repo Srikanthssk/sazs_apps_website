@@ -603,17 +603,24 @@ h4 {
 
 .why-us .top-line {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: bold ;
     color: #333;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.succeed-text {
+    color: #3E89EC !important; /* Change this to your desired color */
+}
+
 
 .why-us h4 {
     margin-bottom: 20px;
     font-size: 3rem;
     font-weight: bold;
+}
+.highlight-text {
+    color: #3E89EC; /* Change this to your desired color */
 }
 
 .cards-container {
@@ -891,7 +898,7 @@ h4 {
 
 .sections-container h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #333 ;
     margin-bottom: 20px;
 }
 

@@ -282,7 +282,9 @@ a:hover {
     text-align: center;
    
 }
-
+.unique-text {
+    color: #3E89EC; /* Change this to your desired color */
+}
 
 .fit-picture {
     max-width: 100%;
@@ -585,50 +587,56 @@ a:hover {
         margin-right: 10px;
         font-size: 16px;
     }
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         .container2 {
             flex-direction: column;
+            align-items: center;
+            text-align: center;
             height: auto;
+            margin: 20px;
             padding: 15px;
-            margin: 30px auto;
+            gap: 15px;
         }
     
-        .image img { display: none;
-            width: 100%;
+        .image img {
             padding-left: 0;
-            border-radius: 8px;
+            width: 100%;
+            max-width: 350px;
+            display: none;
         }
     
         .content2 {
             margin-top: 20px;
             margin-left: 0;
-            text-align: center;
         }
     
         .title {
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            gap: 5px;
         }
     
-        .title h1, 
+        .title h1,
         .title span {
             font-size: 28px;
-            text-align: center;
         }
     
         .list {
             gap: 20px;
+            
+         
         }
     
         .list-item {
             font-size: 14px;
+            /* justify-content: center;
+             */
         }
     
         .list-item::before {
             font-size: 14px;
         }
     }
+    
     
     .logo {
         text-align: right;
@@ -788,7 +796,7 @@ a:hover {
 .join-button {
     display: inline-block;
     background-color: #216DCE;
-    color: #fafbfc;
+    color: #fafbfc !important;
     padding: 12px 32px;
     border-radius: 25px;
     text-decoration: none;

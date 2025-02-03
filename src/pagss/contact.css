@@ -162,7 +162,9 @@ a:hover {
     }
 }
 
-
+.unique-text {
+    color: #3E89EC; /* Change this to your desired color */
+}
 
 
 .contact-us-section {
@@ -439,7 +441,7 @@ a:hover {
 .join-button {
     display: inline-block;
     background-color: #216DCE;
-    color: #fafbfc;
+    color: #fafbfc !important;
     padding: 12px 32px;
     border-radius: 25px;
     text-decoration: none;
