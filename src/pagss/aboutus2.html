@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SAZS APP</title>
+    <link rel="icon" type="image/x-icon" href="LOGO_white.ico">
+    <link rel="stylesheet" href="aboutus2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+
+<body>
+
+   
+    <div class="header-nav">
+        <div class="logo-container">
+            <img src="../assets/logo/sazs apps logo grey.png" alt="company logo">
+        </div>
+        <nav class="header-bar-nav">
+            <a href="../../index.html">Home</a>
+            <a href="./aboutus.html">About</a>
+            <a href="./aboutus2.html"> Features</a>
+            <a href="./careers.html">Careers</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+   
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Home</a>
+                <a href="./aboutus.html">About</a>
+                <a href="./aboutus2.html"> Features</a>
+               
+                
+        <a href="./careers.html">Careers</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+    <script>
+        let lastScrollTop = 0; // Keeps track of the last scroll position
+        const header = document.querySelector('.header-nav');
+        
+        window.onscroll = function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // If scrolling down, hide the header
+            if (currentScroll > lastScrollTop) {
+                header.classList.add("hide");  // Add class to hide the header
+            } else {
+                header.classList.remove("hide");  // Remove class to show the header
+            }
+            
+            // If scrolling back to top, fix the header
+            if (currentScroll <= 0) {
+                header.classList.remove("fixed");
+            } else if (currentScroll > 100) {  // Adjust the value as per need
+                header.classList.add("fixed");
+            }
+    
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Ensure it's not negative
+        };
+    </script>
+    
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    
+        function toggleDroupdown() {
+            const droupdown = document.getElementById("aboutDroupdown");
+            if (droupdown.style.display === "block") {
+                droupdown.style.display = "none";
+            } else {
+                droupdown.style.display = "block";
+            }
+        }
+    </script>
+    <section class="Quarry ">
+        <div class="Quarry-text fade-in">
+            <h2  class="in fade-in"> UNIQUE FEATURES</h2>
+            <h3 class="subtitle fade-in">MONITOR ALL THE LOADS & VEHICLE INSIDE THE CRUSHER</h3>
+            <div class="features">
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/access-control-list.png" alt="Controlled Platform Icon">
+                    <div class="feature-text">Controlled and Secured Platform</div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/all_10458517.png" alt="Accuracy Icon">
+                    <div class="feature-text">100% accuracy on empty/load weights</div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/risk-management_17575277.png" alt="No Manual Intervention Icon">
+                    <div class="feature-text">No manual Intervention and reduces risks involved in billing</div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/task_12285583.png" alt="Token Management Icon">
+                    <div class="feature-text">Token generation & management for easy loading</div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/access_12510409.png" alt="Gate Pass Icon">
+                    <div class="feature-text">Gate Pass Management <span class="optional">(Optional)</span></div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/shipping_1288379.png" alt="Weighment System Icon">
+                    <div class="feature-text">Automated Weighment System <span class="optional">(Optional)</span></div>
+                </div>
+                <div class="feature zoom-in">
+                    <img src="../assets/content images/delivery-truck_3806241.png" alt="Camera Integration Icon">
+                    <div class="feature-text">Camera image integration to track the material and vehicle <span
+                            class="optional">(Optional)</span></div>
+                </div>
+                
+            </div>
+            <div class="container1">
+                <div class="card zoom-in">
+                    <img src="../assets/content images/269256065_11244141.svg" alt="E-Invoicing Icon">
+                    <span>E-Invoicing Ready</span>
+                </div>
+                <div class="card zoom-in">
+                    <img src="../assets/content images/8449777_3908629.svg" alt="ANPR Icon">
+                    <span>ANPR Integration</span>
+                </div>
+            </div>
+        </div>
+        <div class="Quarry-text zoom-in ">
+            <img class="fit-picture "src="../assets/content images/sss.png" alt="">
+            
+        </div>
+    </section>
+
+
+
+    <div class="grid-container">
+        <div class="feature-card">
+            <img src="../assets/content images/rating.png" alt="Customer Management" class="feature-img">
+            <h2 class="feature-title">Customer Management</h2>
+            <p class="feature-text">Customer management module is to help you define customer settings and prepare customer credit, debit information on the basic of sales and expenses.</p>
+            <div class="label-container">
+                <span class="label">CRM</span>
+                <span class="label">Billing</span>
+                <span class="label">Satisfaction</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/interest.png" alt="Rate Management" class="feature-img">
+            <h2 class="feature-title">Rate Management</h2>
+            <p class="feature-text">This modules helps the users to define fixed price and discounts for each customer. This is the onetime activity and applied automatically during billing..</p>
+            <div class="label-container">
+                <span class="label">Dynamic Pricing</span>
+                <span class="label">Discount Rules</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/key_15822785.png" alt="Data Security" class="feature-img">
+            <h2 class="feature-title">Data Security</h2>
+            <p class="feature-text">To ensure the maximum security, our products are enabled with a two factor authentication and user access is monitored via a SAZS utility</p>
+            <div class="label-container">
+                <span class="label">Encryption</span>
+                <span class="label">Access Control</span>
+                <span class="label">Backup</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/sales_16813300.png" alt="Sales Management" class="feature-img">
+            <h2 class="feature-title">Sales Management</h2>
+            <p class="feature-text">This module helps you for billing and create invoices on the basis of both unit and ton value. This simple & powerful UI with auto intelligence system helps the users to create invoices quickly..</p>
+            <div class="label-container">
+                <span class="label">Invoices</span>
+                <span class="label">Performance</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/mining_1685683.png" alt="Weighbridge Integration" class="feature-img">
+            <h2 class="feature-title">Mines Operations</h2>
+            <p class="feature-text">The Mines Operations module tracks drilling and blasting activities in mining operations. It records detailed information on a daily, weekly, and monthly basis. This helps in monitoring and managing mining operations efficiently.</p>
+            <div class="label-container">
+                <span class="label">Maintenance Scheduling </span>
+                <span class="label">Quality Control</span>
+                <span class="label">Safety Compliance</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/material-management.png" alt="Inventory Management" class="feature-img">
+            <h2 class="feature-title">Inventory Management</h2>
+            <p class="feature-text">This system handles organization profiles, sales, purchase details, and current stock levels. It allows for inventory updates and transfers between locations. Additionally, it provides real-time insights into stock balances and transaction details.</p>
+            <div class="label-container">
+                <span class="label">Stock Control</span>
+                <span class="label">Warehousing</span>
+                <span class="label">Valuation</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/diagnostic_1453178.png" alt="Inventory Management" class="feature-img">
+            <h2 class="feature-title">Tyre Monitoring</h2>
+            <p class="feature-text">This module helps to track the tyre consumption of vechiles and machinaries. This also helps to track the millage with auto inteligence reports.
+            </p>
+            <div class="label-container">
+                <span class="label">Fleet Safety Tire</span>
+                <span class="label">Tire Health Monitoring</span>
+                <span class="label"> Wear Analysis</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/expense.png" alt="Inventory Management" class="feature-img">
+            <h2 class="feature-title">Accounts Management</h2>
+            <p class="feature-text">This module helps to track and visualize all the financial transactions and payable and receivable information’s</p>
+            <div class="label-container">
+                <span class="label">Financial Tracking </span>
+                <span class="label">Income Tracking</span>
+                <span class="label">Billing Automation</span>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="../assets/content images/clock_14041639.png" alt="Inventory Management" class="feature-img">
+            <h2 class="feature-title">Employee Management</h2>
+            <p class="feature-text">Optimize workforce management with Sazs Quarry—automate HR tasks, track attendance, and streamline payroll. Empower your team with self-service tools and data-driven insights..</p>
+            <div class="label-container">
+                <span class="label">Centralized Reporting  </span>
+                <span class="label">Attendance Tracking</span>
+                <!-- <span class="label">Time and Labor Management</span> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container2 ">
+        <div class="image fade-in">
+            <img src="../assets/content images/erpaboutus2-removebg-preview.png" alt="About SAZS ERP">
+        </div>
+        <div class="content2">
+            <div class="title fade-in">
+                <h1>About</h1>
+                <span>Sazs ERP Software</span>
+            </div>
+            <div class="list">
+                <div class="list-item zoom-in">Track and monitor every operation from remote</div>
+                <div class="list-item zoom-in">No dependency with any employees</div>
+                <div class="list-item zoom-in">100% accuracy in financial statements in a single click</div>
+                <div class="list-item zoom-in">Manage and run multiple yards in multiple places without hassle</div>
+                <div class="list-item zoom-in">Reduced manual effort and 0% manual errors</div>
+                <div class="list-item zoom-in">Domain-specific AI-based ERP software</div>
+            </div>
+          
+        </div>
+    </div>
+    <!-- <div class="comparison-container zoom-in">
+        <div class="comparison-header zoom-in">
+            <h2>With SAZS</h2>
+            <h2>Without SAZS</h2>
+        </div>
+        <div class="comparison-columns">
+            <div class="column">
+                <h3></h3>
+                <div class="item zoom-in">
+                    <img src="productivity_17819400.png" alt="Icon">
+                    <p>Boost productivity, cut downtime, and streamline operations with automation and rapid issue resolution</p>
+                </div>
+                <div class="item zoom-in">
+                    <img src="acceptance_12454960.png" alt="Icon">
+                    <p>Evaluate impact on service quality, potentially enhancing client satisfaction via improved maintenance and fewer errors</p>
+                </div>
+                <div class="item zoom-in">
+                    <img src="margin_3605248.png" alt="Icon">
+                    <p>Evaluate long-term scalability, benefits, and adaptability to technological changes and market dynamics</p>
+                </div>
+            </div>
+            <div class="column">
+                <h3></h3>
+                <div class="item zoom-in">
+                    <img src="announcement_4171317.png" alt="Icon">
+                    <p>Analyze manual task time, issue identification delays, and errors causing inefficiencies or downtime</p>
+                </div>
+                <div class="item zoom-in">
+                    <img src="plans_12197518.png" alt="Icon">
+                    <p>Examine how lacking a maintenance system affects service quality, possibly causing client dissatisfaction due to errors or delays</p>
+                </div>
+                <div class="item zoom-in">
+                    <img src="investment_11184049.png" alt="Icon">
+                    <p>Assess risks arising from the lack of adaptability, growth constraints, and impact on market competitiveness</p>
+                </div>
+            </div>
+        </div>
+        <div class="balance zoom-in">
+            <img src="images.jpg" alt="Coins">
+            <img src="49c319_660dedbd365b4dd3b036c4dd02f84d7f~mv2_d_1500_1500_s_2.png" alt="Person">
+            <img src="pngtree-vector-illustration-of-a-thief-stealing-an-antique-wooden-chest-filled-with-money-vector-png-image_41109224.jpg" alt="Coins">
+        </div>
+    </div> -->
+    
+    <footer class="footer-container fade-in">
+        <div class="footer-content">
+            <h1 class="heading zoom-in">Stronger. Smarter. Moving Forward.</h1>
+            <a href="./contact.html" class="join-button">Join us</a>
+<!-- 
+            <div class="social-links">
+                <a href="#" class="linkedin-icon">
+                    <img src="LinkedIn_icon.svg"
+                        alt="LinkedIn">
+                </a>
+                 
+            <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" class="instagram-icon">
+                <img src="instagram.svg" alt="Instagram">
+            </a>
+           
+            <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" class="facebook-icon">
+                <img src="facebook.svg" alt="Facebook">
+            </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="./aboutus2.html"> Features</a>
+                <a href="./production.html">production</a>
+                
+                <a href="./careers.html">Careers</a>
+                <a href="./contact.html">Contact Us</a>
+               
+            </nav> -->
+        
+<!-- 
+            <div class="copyright">
+                © 2025,  Copyright Sazs Apps. All Rights Reserved
+            </div> -->
+        </div>
+
+      
+
+        
+    </footer>
+
+    <footer class="a">
+        <div class="b">
+          <a href="https://twitter.com" target="_blank" class="c" rel="noopener">
+             <img src="../assets/content images/twitter_5968830.png" alt="Twitter" class="d">
+            </a>
+          <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/facebook.svg" alt="Facebook" class="d">
+          </a>
+          <a href="https://youtube.com/@sazsapps?si=0CPqHj-h-GcEJaNI" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/youtube_1384060.png" alt="YouTube" class="d">
+          </a>
+          <a href="https://in.linkedin.com/" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/LinkedIn_icon.svg" alt="LinkedIn" class="d">
+          </a>
+          <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/instagram.svg" alt="Instagram" class="d">
+          </a>
+        </div>
+
+
+       
+        <div class="e">
+          <a href="../../index.html" class="f">Home</a>
+          <a href="./aboutus.html" class="f">About Us</a>
+          <a href="./aboutus2.html" class="f">Features</a>
+          <!-- <a href="./production.html" class="f">production</a> -->
+          <a href="./careers.html" class="f">Careers</a>
+          <a href="./contact.html" class="f">Contact Us</a>
+          <a href="#" class="f">Terms of Service</a>
+          
+        </div>
+      </footer>
+
+
+
+    <footer class="footer">
+        <img src="../assets/logo/sazsapps logo wht.png" alt="Zoho Logo">
+                <div>© 2025, Sazs Apps Pvt. Ltd. All Rights Reserved.</div>
+
+        <button class="scroll-top" aria-label="Scroll to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+        </button>
+      </footer>
+
+    <script>
+        // Scroll to top functionality
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll button based on scroll position
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.querySelector('.scroll-top');
+            if (window.scrollY > 200) {
+                scrollButton.style.display = 'flex';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                threshold: 0.2, // Trigger animation when 20% of the element is visible
+            };
+    
+            const animatedElements = document.querySelectorAll(".fade-in, .slide-in, .zoom-in");
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, observerOptions);
+    
+            animatedElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
+    
+   
+
+</body>

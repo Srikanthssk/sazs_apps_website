@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SAZS APP</title>
+    <link rel="icon" type="image/x-icon" href="LOGO_white.ico">
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    
+    <div class="header-nav">
+        <div class="logo-container">
+            <img src="../assets/logo/sazs apps logo grey.png" alt="company logo">
+        </div>
+        <nav class="header-bar-nav">
+            <a href="../../index.html">Home</a>
+            <a href="./aboutus.html">About</a>
+            <a href="./aboutus2.html"> Features</a>
+            <a href="./careers.html">Careers</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+   
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Home</a>
+                <a href="./aboutus.html">About</a>
+                <a href="./aboutus2.html"> Features</a>
+            
+            
+        <a href="./careers.html">Careers</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+    <script>
+        let lastScrollTop = 0; // Keeps track of the last scroll position
+        const header = document.querySelector('.header-nav');
+        
+        window.onscroll = function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // If scrolling down, hide the header
+            if (currentScroll > lastScrollTop) {
+                header.classList.add("hide");  // Add class to hide the header
+            } else {
+                header.classList.remove("hide");  // Remove class to show the header
+            }
+            
+            // If scrolling back to top, fix the header
+            if (currentScroll <= 0) {
+                header.classList.remove("fixed");
+            } else if (currentScroll > 100) {  // Adjust the value as per need
+                header.classList.add("fixed");
+            }
+    
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Ensure it's not negative
+        };
+    </script>
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    
+        function toggleDroupdown() {
+            const droupdown = document.getElementById("aboutDroupdown");
+            if (droupdown.style.display === "block") {
+                droupdown.style.display = "none";
+            } else {
+                droupdown.style.display = "block";
+            }
+        }
+    
+    </script>
+        <section class="procurement-section fade-in">
+            <div class="procurement-content">
+                <h1>A high-octane company that set sail in the year 2018 as a "small unit action". </h1>
+                <p>
+                    "Embarking on our journey in 2018 as a modest initiative, we've surged ahead, evolving into a dynamic force with an unwavering
+                    commitment to excellence. From a humble start of serving two clients, we've now proudly extended our reach to delight over
+                    150 customers.
+                    Our product has garnered the trust of over 150 delighted customers and continues to grow steadily. This rapidly expanding
+                    clientele stands testament to the reliability, efficiency, and satisfaction our software brings to stone crusher and quarry
+                    businesses. Trust SAZS Apps ERP to transform your operations seamlessly and reliably."
+                </p>
+                
+            </div>
+            <div class="procurement-map zoom-in">
+                <img src="../assets/content images/map sazs location (3).svg" alt="Map of India with locations" />
+            </div>
+        </section>
+        <div class="container fade-in">
+            <header>
+              <h1><span class="highlight slide-in">WHAT</span> WE DO</h1>
+            </header>
+            
+            <footer>
+              <p>
+                A team of solutioning artisans in the IT Space who specialize in taking your mines/crusher management processes online with powerful Analytics and monitoring, anywhere anytime. This helps our customers visualize data and Vitals remotely to perform informed decisions and eventual actions. Our solutions are designed to control embezzlement, therefore reduction in operations cost and increase in profit by <strong>10-30%</strong>.
+              </p>
+            </footer>
+            <section class="content">
+                <div class="illustration">
+                  <img src="../assets/content images/happy-united-business-team-b.png" alt="Illustration representing what we do">
+                </div>
+              </section>
+          </div>
+
+        <section class="connectivity-section fade-in">
+            <p class="section-subtitle">     </p>
+            <h1 class="section-title">Seamless  Effortless</h1>
+            <p class="section-description">
+                From purchase managers to business leaders, site supervisors to truck drivers, 
+                and back-office accountants. Our platform simplifies collaboration, turning every 
+                role into a key player for seamless transactions.
+            </p>
+            <div class="connectivity-graphic zoom-in">
+                <div class="central-node">
+                    <img src="../assets/content images/5498791.jpg" alt="" />
+                </div>
+               
+            </div>
+        </section>
+
+
+        <section class="performance-section fade-in">
+            <p class="section-subtitle1"></p>
+            <h1 class="section-title1">Purpose & Aspirations</h1>
+            <div class="cards-container">
+                <div class="card zoom-in">
+                    <div class="card-icon">
+                        <img src="../assets/content images/mission.svg" alt="Mission Icon">
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-description">
+                        Our customers and partners love us because our
+                       products are SAFE and SECURE
+                       Our support is AMAZING! and above all, our
+                           customers save money.
+                    </p>
+                </div>
+                <div class="card zoom-in">
+                    <div class="card-icon">
+                        <img src="../assets/content images/Observation.png" alt="Vision Icon">
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-description">
+                        Achieve better actuals versus plans, Get more
+                        productivity
+                        safer operations, Develop targeted strategies,
+                        Optimize scheduling, material, and equipment
+                        flow,
+                           </p>
+                </div>
+                <div class="card zoom-in">
+                    <div class="card-icon">
+                        <img src="../assets/content images/commitment.png" alt="Vision Icon">
+                    </div>
+                    <h3 class="card-title">Commitment</h3>
+                    <p class="card-description">
+                        We, an innovative firm that prioritises its clients and attempts to deliver the best service possible. </p>
+                </div>
+            </div>
+        </section>
+        
+        
+    <footer class="footer-container fade-in">
+        <div class="footer-content">
+            <h1 class="heading zoom-in">We're Growing!</h1>
+            <a href="./contact.html" class="join-button">Join us</a>
+
+        </div>
+
+      
+
+        
+    </footer>
+
+    <footer class="a">
+        <div class="b">
+          <a href="https://twitter.com" target="_blank" class="c" rel="noopener">
+             <img src="../assets/content images/twitter_5968830.png" alt="Twitter" class="d">
+            </a>
+          <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/facebook.svg" alt="Facebook" class="d">
+          </a>
+          <a href="https://youtube.com/@sazsapps?si=0CPqHj-h-GcEJaNI" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/youtube_1384060.png" alt="YouTube" class="d">
+          </a>
+          <a href="https://in.linkedin.com/" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/LinkedIn_icon.svg" alt="LinkedIn" class="d">
+          </a>
+          <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/instagram.svg" alt="Instagram" class="d">
+          </a>
+        </div>
+
+
+
+       
+        <div class="e">
+          <a href="../../index.html" class="f">Home</a>
+          <a href="./aboutus.html" class="f">About Us</a>
+          <a href="./aboutus2.html" class="f">Features</a>
+          
+          <a href="./careers.html" class="f">Careers</a>
+          <a href="./contact.html" class="f">Contact Us</a>
+          <a href="#" class="f">Terms of Service</a>
+          
+        </div>
+      </footer>
+
+
+
+    <footer class="footer">
+        <img src="../assets/logo/sazsapps logo wht.png" alt="Zoho Logo">
+        <div>© 2025, Sazs Apps Pvt. Ltd. All Rights Reserved.</div>
+
+        <button class="scroll-top" aria-label="Scroll to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+        </button>
+      </footer>
+
+    <script>
+        // Scroll to top functionality
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll button based on scroll position
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.querySelector('.scroll-top');
+            if (window.scrollY > 200) {
+                scrollButton.style.display = 'flex';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                threshold: 0.2, // Trigger animation when 20% of the element is visible
+            };
+    
+            const animatedElements = document.querySelectorAll(".fade-in, .slide-in, .zoom-in");
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, observerOptions);
+    
+            animatedElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

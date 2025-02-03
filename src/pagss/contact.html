@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SAZS APP</title>
+    <link rel="icon" type="image/x-icon" href="LOGO_white.ico">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  
+    <div class="header-nav">
+        <div class="logo-container">
+            <img src="../assets/logo/sazs apps logo grey.png" alt="company logo">
+        </div>
+        <nav class="header-bar-nav">
+            <a href="../../index.html">Home</a>
+            <a href="./aboutus.html">About</a>
+            <a href="./aboutus2.html"> Features</a>
+            <a href="./careers.html">Careers</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+   
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Home</a>
+                <a href="./aboutus.html">About</a>
+                <a href="./aboutus2.html"> Features</a>
+                <!-- <a href="./production.html"> production</a> -->
+            
+        <a href="./careers.html">Careers</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+    <script>
+        let lastScrollTop = 0; // Keeps track of the last scroll position
+        const header = document.querySelector('.header-nav');
+        
+        window.onscroll = function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // If scrolling down, hide the header
+            if (currentScroll > lastScrollTop) {
+                header.classList.add("hide");  // Add class to hide the header
+            } else {
+                header.classList.remove("hide");  // Remove class to show the header
+            }
+            
+            // If scrolling back to top, fix the header
+            if (currentScroll <= 0) {
+                header.classList.remove("fixed");
+            } else if (currentScroll > 100) {  // Adjust the value as per need
+                header.classList.add("fixed");
+            }
+    
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Ensure it's not negative
+        };
+    </script>
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    
+        function toggleDroupdown() {
+            const droupdown = document.getElementById("aboutDroupdown");
+            if (droupdown.style.display === "block") {
+                droupdown.style.display = "none";
+            } else {
+                droupdown.style.display = "block";
+            }
+        }
+    </script>
+        <div class="contact-us-section zoom-in">
+            <div class="contact-info">
+                <p class="section-subtitle">CONTACT US</p>
+                <h1 class="section-title">Get in touch</h1>
+                <p class="section-description">
+                    Our team is happy to answer all your queries. Fill out the form and we will reach out to you as soon as possible!
+                </p>
+            </div>
+            <div class="contact-form ">
+                <div class="tabs">
+                    <button class="tab active">The field is required mark as </button>
+                   
+                </div>
+                <form>
+                    <div class="form-group zoom-in ">
+                        <div class="form-field zoom-in">
+                            <label for="first-name ">First name <span>*</span></label>
+                            <input type="text" id="first-name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-field zoom-in">
+                            <label for="last-name">Last name <span>*</span></label>
+                            <input type="text" id="last-name" placeholder="Enter your surname" required>
+                        </div>
+                    </div>
+                    <div class="form-group zoom-in">
+                        <div class="form-field zoom-in">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" placeholder="example@gmail.com" required>
+                        </div>
+                        <div class="form-field zoom-in">
+                            <label for="phone-number zoom-in">Phone number <span>*</span></label>
+                            <input type="tel" id="phone-number" placeholder="+91 000 000 000" required>
+                        </div>
+                    </div>
+                    <div class="form-group zoom-in">
+                        <div class="form-field zoom-in">
+                            <label for="company-name">Company name</label>
+                            <input type="text" id="company-name" placeholder="Enter your company name">
+                        </div>
+                        <div class="form-field zoom-in">
+                            <label for="gst-number">GST number</label>
+                            <input type="text" id="gst-number" placeholder="Enter GST number">
+                        </div>
+                    </div>
+                    <div class="form-field full-width zoom-in">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" rows="4" placeholder="Leave here your message" required></textarea>
+                    </div>
+                    <div class="form-footer zoom-in">
+                        <p class="privacy-policy zoom-in">
+                            *I confirm that I have read and accepted Sazs Apps Pvt. Ltd <a href="#">Privacy Policy</a>.
+                        </p>
+                        <button type="submit" class="submit-button">Send message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <div class="contact-details-section fade-in">
+            <div class="contact-heading">
+                <h1 class="section-title zoom-in">We are here!</h1>
+                <p class="section-description">
+                    Get answers, feedback and learn how to contribute to the Sazs Apps Pvt. Ltd.
+                </p>
+            </div>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:sales@arisinfra.one">sazsapps@gmail.com
+
+                        </a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:91 76666 28000 ">+91 76666 28000 <br>
+                        +91 04632 294666</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Socials</h3>
+                    <p><a href="https://in.linkedin.com/">LinkedIn</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>
+                        8D, Arunachalam Pettai Street,<br>
+                        Kovilpatti, Tuticorin Dist, TamilNadu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    <footer class="footer-container fade-in">
+        <div class="footer-content">
+            <h1 class="heading zoom-in">We're Growing!</h1>
+            <a href="./contact.html" class="join-button">Join us</a>
+<!-- 
+            <div class="social-links">
+                <a href="#" class="linkedin-icon">
+                    <img src="LinkedIn_icon.svg"
+                        alt="LinkedIn">
+                </a>
+                 
+            <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" class="instagram-icon">
+                <img src="instagram.svg" alt="Instagram">
+            </a>
+           
+            <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" class="facebook-icon">
+                <img src="facebook.svg" alt="Facebook">
+            </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="./aboutus2.html"> Features</a>
+                <a href="./production.html">production</a>
+                
+                <a href="./careers.html">Careers</a>
+                <a href="./contact.html">Contact Us</a>
+               
+            </nav> -->
+        
+<!-- 
+            <div class="copyright">
+                © 2025,  Copyright Sazs Apps. All Rights Reserved
+            </div> -->
+        </div>
+
+      
+
+        
+    </footer>
+
+    <footer class="a">
+        <div class="b">
+          <a href="https://twitter.com" target="_blank" class="c" rel="noopener">
+             <img src="../assets/content images/twitter_5968830.png" alt="Twitter" class="d">
+            </a>
+          <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/facebook.svg" alt="Facebook" class="d">
+          </a>
+          <a href="https://youtube.com/@sazsapps?si=0CPqHj-h-GcEJaNI" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/youtube_1384060.png" alt="YouTube" class="d">
+          </a>
+          <a href="https://in.linkedin.com/" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/LinkedIn_icon.svg" alt="LinkedIn" class="d">
+          </a>
+          <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" target="_blank" class="c"rel="noopener">
+            <img src="../assets/content images/instagram.svg" alt="Instagram" class="d">
+          </a>
+        </div>
+
+
+       
+        <div class="e">
+          <a href="../../index.html" class="f">Home</a>
+          <a href="./aboutus.html" class="f">About Us</a>
+          <a href="./aboutus2.html" class="f">Features</a>
+          <!-- <a href="./production.html" class="f">production</a> -->
+          <a href="./careers.html" class="f">Careers</a>
+          <a href="./contact.html" class="f">Contact Us</a>
+          <a href="#" class="f">Terms of Service</a>
+          
+        </div>
+      </footer>
+
+
+
+    <footer class="footer">
+        <img src="../assets/logo/sazsapps logo wht.png" alt="Zoho Logo">
+        <div>© 2025, Sazs Apps Pvt. Ltd. All Rights Reserved.</div>
+
+        <button class="scroll-top" aria-label="Scroll to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+        </button>
+      </footer>
+
+    <script>
+        // Scroll to top functionality
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll button based on scroll position
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.querySelector('.scroll-top');
+            if (window.scrollY > 200) {
+                scrollButton.style.display = 'flex';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                threshold: 0.2, // Trigger animation when 20% of the element is visible
+            };
+    
+            const animatedElements = document.querySelectorAll(".fade-in, .slide-in, .zoom-in");
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, observerOptions);
+    
+            animatedElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
