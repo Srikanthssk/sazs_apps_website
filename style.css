@@ -338,6 +338,13 @@ a:hover {
     .text-content p {
         font-size: 1.1rem;
     }
+    .slide-img {
+       
+        margin-top: 0px;
+      }
+      .text-content {
+        margin-top: 0px;
+      }
 }
 @media (max-width: 768px) {
     .carousel-inner {

@@ -48,50 +48,50 @@
         <a href="./src/pagss/contact.html">Contact</a>
     </div>
     <script>
-        let lastScrollTop = 0; // Keeps track of the last scroll position
+        let lastScrollTop = 0;
         const header = document.querySelector('.header-nav');
-        
-        window.onscroll = function() {
+    
+        window.onscroll = function () {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // If scrolling down, hide the header
+    
             if (currentScroll > lastScrollTop) {
-                header.classList.add("hide");  // Add class to hide the header
+                header.classList.add("hide");
             } else {
-                header.classList.remove("hide");  // Remove class to show the header
+                header.classList.remove("hide");
             }
-            
-            // If scrolling back to top, fix the header
+    
             if (currentScroll <= 0) {
                 header.classList.remove("fixed");
-            } else if (currentScroll > 100) {  // Adjust the value as per need
+            } else if (currentScroll > 100) {
                 header.classList.add("fixed");
             }
     
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Ensure it's not negative
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         };
-    </script>
     
-    
-    <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
+            document.addEventListener("click", closeNavOnClickOutside);
         }
     
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
         }
     
-        function toggleDroupdown() {
-            const droupdown = document.getElementById("aboutDroupdown");
-            if (droupdown.style.display === "block") {
-                droupdown.style.display = "none";
-            } else {
-                droupdown.style.display = "block";
+        function closeNavOnClickOutside(event) {
+            const sidenav = document.getElementById("mySidenav");
+            if (!sidenav.contains(event.target) && !event.target.closest(".icon")) {
+                closeNav();
             }
         }
+    
+        function toggleDropdown() {
+            const dropdown = document.getElementById("aboutDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
     </script>
-     
+    
     <section class="container mt-5">
         <div id="quarryCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner">
