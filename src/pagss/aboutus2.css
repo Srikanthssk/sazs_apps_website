@@ -323,7 +323,7 @@ a:hover {
         .Quarry {
             flex-direction: column;
             text-align: center;
-            margin: 20px;
+            /* margin: 20px; */
             padding: 30px 15px;
             background-color: #f9f9f9;
         }

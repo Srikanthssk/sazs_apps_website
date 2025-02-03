@@ -1186,6 +1186,54 @@ h4 {
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+    .network-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .network-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .network-graphic img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .network-content {
+        min-width: auto;
+        padding: 0 20px;
+    }
+
+    .network-content ul {
+        padding-left: 20px;
+    }
+
+    .network-content h2 {
+        font-size: 24px;
+    }
+
+    .network-content h3 {
+        font-size: 16px;
+    }
+
+    .network-content ul li {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .network-content ul {
+        padding-left: 44px;
+        
+        
+    }
+}
+
 
 .integration-container {
     width: 900px;
@@ -1255,13 +1303,6 @@ h4 {
 
 
 
-@media (max-width: 760px) {
-    .network-content ul {
-        padding-left: 44px;
-        
-        
-    }
-}
 
 /* Reset and base styles */
 * {
