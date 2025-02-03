@@ -334,7 +334,25 @@ a:hover {
         font-size: 1.1rem;
     }
 }
-
+@media (max-width: 768px) {
+    .carousel-inner {
+      height: auto;
+    }
+    .carousel-item {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+    .slide-img {
+      max-height: 50vh;
+      margin-top: 50px;
+    }
+    .text-content {
+      margin-top: 40px;
+      padding: 0 15px;
+    }
+  }
+  
 
 
 
