@@ -144,7 +144,22 @@ a:hover {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+     /* padding-top: 60px; */
+}
+
+.closebtn{
+    padding-left: 220px !important;
+}
+.sidenav-logo {
+    width: 130px; 
+    margin-bottom: 20px;
+    margin-left: -34px;
+} 
+
+.logo-link {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .sidenav a {
@@ -302,6 +317,17 @@ a:hover {
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   }
+
+  @media screen and (max-width: 768px) {
+    .illustration img {
+      margin-left: 160px;
+      
+      max-width: 56%;
+      height: auto;
+      border-radius: 8px;
+  
+      }}
+
   @media screen and (max-width: 600px) {
   .illustration img {
     margin-left: 85px;
