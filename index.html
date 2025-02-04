@@ -31,11 +31,37 @@
             <a href="./src/pagss/careers.html">Careers</a>
             <a href="./src/pagss/contact.html">Contact</a>
         </nav>
-        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <!-- <a href="javascript:void(0);" class="icon" onclick="openNav()">
             <i class="fa fa-bars"></i>
-        </a>
+        </a> -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+    <i class="fa fa-bars"></i>
+</a>
     </div>
+    <script>
+        
+    
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        const isOpen = sidenav.style.width === "250px";
 
+        if (isOpen) {
+            sidenav.style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
+        } else {
+            sidenav.style.width = "250px";
+            setTimeout(() => document.addEventListener("click", closeNavOnClickOutside), 100);
+        }
+    }
+
+    function closeNavOnClickOutside(event) {
+        const sidenav = document.getElementById("mySidenav");
+        if (!sidenav.contains(event.target) && !event.target.closest(".icon")) {
+            sidenav.style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
+        }
+    }
+    </script>
    
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
@@ -47,21 +73,7 @@
         <a href="./src/pagss/careers.html">Careers</a>
         <a href="./src/pagss/contact.html">Contact</a>
     </div>
-<!-- 
-    <div id="mySidenav" class="sidenav">
-        
-        <a href="./index.html" class="logo-link">
-            <img src="./src/assets/logo/sazsapps logo wht.png" alt="Logo" class="sidenav-logo">
-        </a>
-        
-        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index.html">Home</a>
-        <a href="./src/pagss/aboutus.html">About</a>
-        <a href="./src/pagss/aboutus2.html"> Features</a>
-        
-        <a href="./src/pagss/careers.html">Careers</a>
-        <a href="./src/pagss/contact.html">Contact</a>
-    </div> -->
+
     <script>
         let lastScrollTop = 0;
         const header = document.querySelector('.header-nav');
