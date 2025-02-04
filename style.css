@@ -68,6 +68,18 @@ a:hover {
         transition: color 0.3s ease !important;
     }
 }
+/* Default link styles */
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Active link (adds underline) */
+.nav-link.active {
+    border-bottom: 2px solid #0b0d1f; /* Change color as needed */
+    font-weight: bold;
+}
 
 
 .logo-container img {
@@ -75,7 +87,7 @@ a:hover {
 }
 
 .header-bar-nav {
-    display: flow-root;
+    display: flex;
     gap: 20px;
 }
 

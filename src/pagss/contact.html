@@ -16,22 +16,45 @@
   
     <div class="header-nav">
         <div class="logo-container">
-            <img src="../assets/logo/sazs apps logo grey.png" alt="company logo">
+            <img src="../assets/logo/sazs apps logo grey.png"  alt="company logo">
         </div>
         <nav class="header-bar-nav">
-            <a href="../../index.html">Home</a>
-            <a href="./aboutus.html">About</a>
-            <a href="./aboutus2.html"> Features</a>
-            <a href="./careers.html">Careers</a>
-            <a href="./contact.html">Contact</a>
+            <a href="../../index.html" class="nav-link" data-page="index">Home</a>
+            <a href="./aboutus.html" class="nav-link" data-page="aboutus">About</a>
+            <a href="./Features.html" class="nav-link" data-page="features">Features</a>
+            <a href="./careers.html" class="nav-link" data-page="careers">Careers</a>
+            <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
         </nav>
         <!-- <a href="javascript:void(0);" class="icon" onclick="openNav()">
             <i class="fa fa-bars"></i>
-        </a>
-    </div> --><a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        </a> -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
     <i class="fa fa-bars"></i>
 </a>
     </div>
+
+<script>
+    // Function to highlight the current page in the navbar
+    function highlightActivePage() {
+        const currentPath = window.location.pathname;
+        const links = document.querySelectorAll(".nav-link");
+
+        links.forEach(link => {
+            // Get the page identifier from the data attribute
+            const page = link.getAttribute("data-page");
+
+            // Check if the current URL includes the page identifier
+            if (currentPath.includes(page)) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
+    // Run function on page load
+    document.addEventListener("DOMContentLoaded", highlightActivePage);
+</script>
     <script>
         
     
@@ -75,7 +98,7 @@
         
         <a href="../../index.html">Home</a>
         <a href="./aboutus.html">About</a>
-        <a href="./aboutus2.html"> Features</a>
+        <a href="./Features.html"> Features</a>
     
     
 <a href="./careers.html">Careers</a>
@@ -285,7 +308,7 @@
         <div class="e">
           <a href="../../index.html" class="f">Home</a>
           <a href="./aboutus.html" class="f">About Us</a>
-          <a href="./aboutus2.html" class="f">Features</a>
+          <a href="./Features.html" class="f">Features</a>
           <!-- <a href="./production.html" class="f">production</a> -->
           <a href="./careers.html" class="f">Careers</a>
           <a href="./contact.html" class="f">Contact Us</a>
