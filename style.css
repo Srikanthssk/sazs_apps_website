@@ -110,12 +110,17 @@ a:hover {
     transition: 0.5s;
     padding-top: 60px;
 }
+/* 
+.closebtn{
+    padding-left: 170px !important;
+} */
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181 !important;
+    /* color: #818181 !important; */
+    color: white !important;
     display: block;
     transition: 0.3s;
 }
@@ -123,6 +128,44 @@ a:hover {
 .sidenav a:hover {
     color: #f1f1f1;
 }
+/* 
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white !important;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+}
+
+.sidenav-logo {
+    width: 120px; 
+    margin-bottom: 20px;
+} */
+
+.logo-link {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
 
 .droupdown {
     position: relative;
@@ -165,6 +208,7 @@ a:hover {
         background-color: transparent;
     }
 }
+
 
 
 
