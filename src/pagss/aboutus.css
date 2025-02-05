@@ -408,6 +408,15 @@ a:hover {
     padding-left: 350px;
 
 }
+@media screen and (max-width: 1224px) {
+    
+.connectivity-graphic {
+    
+
+    text-align: center;
+    padding-left: 100px;
+
+}}
 
 .central-node {
     max-width: 100%;
@@ -471,7 +480,7 @@ a:hover {
 }
 @media screen and (max-width: 1400px) {
 .central-node img {
-    max-width: 250px;
+    max-width: 390px;
     
 }
 }

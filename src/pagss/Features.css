@@ -530,6 +530,12 @@ a:hover {
         
 
     }
+    @media (max-width: 1224px) {
+        .container1 {
+            display: grid;
+        }
+      
+    }
 
     .card {
         display: flex;

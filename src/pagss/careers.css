@@ -503,6 +503,14 @@ a:hover {
     width: 500px;
 }
 
+@media (max-width: 1224px) {
+    
+.network-graphic1 img {
+   
+    display: none;
+}
+}
+
 
 .network-content1 {
     flex: 1;
