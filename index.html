@@ -194,7 +194,7 @@
                                 driving efficiency in your operations..</p>
                         </div>
                         <div class="col-md-6">
-                            <img src="src/assets/content images/quarry.png" class="d-block w-100 slide-img" alt="Smart Quarry Operations">
+                            <img src="src/assets/content images/quarry (1).png" class="d-block w-100 slide-img" alt="Smart Quarry Operations">
                         </div>
                     </div>
                 </div>
@@ -413,13 +413,31 @@
        
     </section>
     <div class="video-container zoom-in">
-        <iframe src="https://www.youtube.com/embed/FmLpFO93DPE"
+        <iframe id="videoFrame" 
+            src="https://www.youtube.com/embed/FmLpFO93DPE?autoplay=0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
-
     </div>
+
+
+    <script>
+        function checkAutoplay() {
+            let iframe = document.getElementById("videoFrame");
+            let src = iframe.src;
+
+            if (src.includes("autoplay=1")) {
+                document.getElementById("statusText").innerText = "Autoplay";
+            } else {
+                document.getElementById("statusText").innerText = "Auto Off";
+            }
+        }
+
+        // Run the function on page load
+        checkAutoplay();
+    </script>
+
 
     <section class="technology-section zoom-in">
         <div class="content">
