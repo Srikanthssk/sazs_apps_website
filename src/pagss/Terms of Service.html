@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SAZS APP</title>
+
+    <link rel="icon" type="image/x-icon" href="../assets/logo/LOGO_white.ico">
+    <link rel="stylesheet" href="Terms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    
+
+    <div class="header-nav">
+        <div class="logo-container">
+            <img src="../assets/logo/sazs apps logo grey.png" alt="company logo">
+        </div>
+        <nav class="header-bar-nav">
+            <a href="../../index.html" class="nav-link" data-page="index">Home</a>
+            <a href="./aboutus.html" class="nav-link" data-page="aboutus">About</a>
+            <a href="./Features.html" class="nav-link" data-page="features">Features</a>
+            <a href="./careers.html" class="nav-link" data-page="careers">Careers</a>
+            <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+        </nav>
+        <!-- <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a> -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+    <i class="fa fa-bars"></i>
+</a>
+    </div>
+
+<script>
+    // Function to highlight the current page in the navbar
+    function highlightActivePage() {
+        const currentPath = window.location.pathname;
+        const links = document.querySelectorAll(".nav-link");
+
+        links.forEach(link => {
+            // Get the page identifier from the data attribute
+            const page = link.getAttribute("data-page");
+
+            // Check if the current URL includes the page identifier
+            if (currentPath.includes(page)) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
+    // Run function on page load
+    document.addEventListener("DOMContentLoaded", highlightActivePage);
+</script>
+    <script>
+        
+    
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        const isOpen = sidenav.style.width === "250px";
+
+        if (isOpen) {
+            sidenav.style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
+        } else {
+            sidenav.style.width = "250px";
+            setTimeout(() => document.addEventListener("click", closeNavOnClickOutside), 100);
+        }
+    }
+
+    function closeNavOnClickOutside(event) {
+        const sidenav = document.getElementById("mySidenav");
+        if (!sidenav.contains(event.target) && !event.target.closest(".icon")) {
+            sidenav.style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
+        }
+    }
+    </script>
+   
+    <!-- <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+                <a href="./src/pagss/aboutus.html">About</a>
+                <a href="./src/pagss/aboutus2.html"> Features</a>
+               
+            
+        <a href="./src/pagss/careers.html">Careers</a>
+        <a href="./src/pagss/contact.html">Contact</a>
+    </div> -->
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html" class="logo-link">
+            <img src="./src/assets/logo/sazsapps logo wht.png" alt="Logo" class="sidenav-logo">
+        </a>
+        
+       
+        <a href="./index.html">Home</a>
+        <a href="./src/pagss/aboutus.html">About</a>
+        <a href="./src/pagss/Features.html"> Features</a>
+        
+        <a href="./src/pagss/careers.html">Careers</a>
+        <a href="./src/pagss/contact.html">Contact</a>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header-nav');
+        
+    
+        window.onscroll = function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (currentScroll > lastScrollTop) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+    
+            if (currentScroll <= 0) {
+                header.classList.remove("fixed");
+            } else if (currentScroll > 100) {
+                header.classList.add("fixed");
+            }
+    
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        };
+    
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.addEventListener("click", closeNavOnClickOutside);
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.removeEventListener("click", closeNavOnClickOutside);
+        }
+    
+        function closeNavOnClickOutside(event) {
+            const sidenav = document.getElementById("mySidenav");
+            if (!sidenav.contains(event.target) && !event.target.closest(".icon")) {
+                closeNav();
+            }
+        }
+    
+        function toggleDropdown() {
+            const dropdown = document.getElementById("aboutDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+    
+       
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+        <p>
+            These Terms and Conditions govern your use of the ERP Billing Software provided by our company.
+            By accessing or using the Software, you agree to be bound by these Terms. If you do not agree 
+            to these Terms, you may not use the Software.
+        </p>
+
+         
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By using our ERP Billing Software, you confirm that:</p>
+        <ul>
+            <li>You are at least 18 years old or have the legal capacity to enter into a binding agreement.</li>
+            <li>You have read, understood, and agree to these Terms.</li>
+            <li>You are authorized to use the Software on behalf of your business (if applicable).</li>
+        </ul>
+
+         
+
+        <h2>2. License to Use the Software</h2>
+        <h3>2.1 Grant of License</h3>
+        <p>
+            We grant you a limited, non-exclusive, non-transferable license to use the ERP Billing Software 
+            for your business operations, specifically tailored for quarries and crushers.
+        </p>
+
+        <h3>2.2 Restrictions</h3>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Copy, modify, or distribute the Software without our prior written consent.</li>
+            <li>Reverse engineer, decompile, or disassemble the Software.</li>
+            <li>Use the Software for any illegal or unauthorized purpose.</li>
+            <li>Share your login credentials with unauthorized users.</li>
+        </ul>
+
+         
+
+        <h2>3. Account Registration</h2>
+        <h3>3.1 Account Creation</h3>
+        <p>
+            To use the Software, you must create an account by providing accurate and complete information, 
+            including your business name, contact details, and payment information.
+        </p>
+
+        <h3>3.2 Account Security</h3>
+        <p>
+            You are responsible for maintaining the confidentiality of your account credentials and for all 
+            activities that occur under your account. Notify us immediately of any unauthorized use or 
+            security breach.
+        </p>
+
+         
+
+        <h2>4. Payment Terms</h2>
+        <h3>4.1 Fees</h3>
+        <p>
+            The use of the ERP Billing Software may require payment of subscription fees, which will be 
+            clearly stated on our website or in your agreement with us.
+        </p>
+
+        <h3>4.2 Payment Methods</h3>
+        <p>
+            We accept payments via credit card, bank transfer, or other methods specified on our platform. 
+            All payments are processed securely through third-party payment gateways.
+        </p>
+
+        <h3>4.3 Refunds</h3>
+        <p>
+            Refunds are subject to our Refund Policy, which is available on our website or upon request.
+        </p>
+
+         
+
+        <h2>5. WhatsApp API Integration</h2>
+        <h3>5.1 Usage</h3>
+        <p>
+            The Software includes integration with the WhatsApp API to facilitate communication with your 
+            customers, suppliers, and other stakeholders. By using this feature, you agree to comply with 
+            WhatsApp's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+
+        <h3>5.2 User Consent</h3>
+        <p>
+            You are responsible for obtaining consent from individuals before sending them messages via WhatsApp. 
+            You must also comply with all applicable laws and regulations related to electronic communications.
+        </p>
+    </div>
+</body>
+</html>
+
+    </body>
+    </html>
+    
