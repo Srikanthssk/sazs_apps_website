@@ -9,14 +9,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/logo/LOGO_white.ico">
     <link rel="stylesheet" href="Terms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+  
 </head>
 
 <body>
@@ -88,16 +81,7 @@
     }
     </script>
    
-    <!-- <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index.html">Home</a>
-                <a href="./src/pagss/aboutus.html">About</a>
-                <a href="./src/pagss/aboutus2.html"> Features</a>
-               
-            
-        <a href="./src/pagss/careers.html">Careers</a>
-        <a href="./src/pagss/contact.html">Contact</a>
-    </div> -->
+  
     
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
@@ -159,9 +143,15 @@
             dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         }
     </script>
-    
-       
-    <div class="container">
+<div class="container">
+    <div class="one">
+        <button class="three" onclick="showContent('terms')" aria-expanded="true">Terms</button>
+        <button class="three" onclick="showContent('privacy')" aria-expanded="false">Privacy</button>
+        <button class="three" onclick="showContent('security')" aria-expanded="false">Security and Compliance</button>
+        <button class="three" onclick="showContent('policies')" aria-expanded="false">Policies</button>
+    </div>
+    <div class="four" id="content-area" role="region" aria-labelledby="section-title">
+        <h1 id="section-title">Terms of Service</h1>
         <h1>Terms and Conditions</h1>
         <p>
             These Terms and Conditions govern your use of the ERP Billing Software provided by our company.
@@ -248,9 +238,334 @@
             You are responsible for obtaining consent from individuals before sending them messages via WhatsApp. 
             You must also comply with all applicable laws and regulations related to electronic communications.
         </p>
+        <h3>5.3 Prohibited Activities</h3>
+        <p>
+            You may not use the WhatsApp API to:
+        </p>
+        <ul>
+            <li>Send spam, unsolicited messages, or promotional content without consent.</li>
+            <li>Harass, threaten, or defraud any individual or entity.</li>
+            <li>Violate any third-party rights or applicable laws.</li>
+        </ul>
+
+        <hr>
+
+        <h2>6. Data Ownership and Privacy</h2>
+        <h3>6.1 Your Data</h3>
+        <p>
+            You retain ownership of all data you input into the Software, including business information, transaction records, and customer details.
+        </p>
+
+        <h3>6.2 Our Use of Data</h3>
+        <p>
+            We may use anonymized and aggregated data to improve the Software, develop new features, and conduct analytics. For more details, please refer to our Privacy Policy.
+        </p>
+
+        <hr>
+
+        <h2>7. Intellectual Property</h2>
+        <h3>7.1 Ownership</h3>
+        <p>
+            All intellectual property rights in the Software, including but not limited to copyrights, trademarks, and patents, are owned by our company or its licensors.
+        </p>
+
+        <h3>7.2 Restrictions</h3>
+        <p>
+            You may not use our trademarks, logos, or branding without our prior written consent.
+        </p>
+
+        <h2>8. Termination</h2>
+        <h3>8.1 By You</h3>
+        <p>You may terminate your account at any time by contacting us at [Your Contact Email].</p>
+
+        <h3>8.2 By Us</h3>
+        <p>We may suspend or terminate your access to the Software if:</p>
+        <ul>
+            <li>You violate these Terms.</li>
+            <li>You fail to pay the required fees.</li>
+            <li>We discontinue the Software or any of its features.</li>
+        </ul>
+
+        <h3>8.3 Effect of Termination</h3>
+        <p>
+            Upon termination, your access to the Software will be revoked, and you must cease all use of the Software. We may retain your data for a reasonable period as required by law or our internal policies.
+        </p>
+
+        <hr>
+
+        <h2>9. Disclaimer of Warranties</h2>
+        <p>The Software is provided "as is" and "as available" without any warranties, express or implied. We do not guarantee that the Software will be error-free, secure, or uninterrupted.</p>
+
+        <hr>
+
+        <h2>10. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, SAZS APPS PRIVATE LIMITED shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Software.</p>
+
+        <hr>
+
+        <h2>11. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless SAZS APPS PRIVATE LIMITED and its affiliates, employees, and agents from any claims, damages, or losses arising out of:</p>
+        <ul>
+            <li>Your use of the Software.</li>
+            <li>Your violation of these Terms.</li>
+            <li>Your misuse of the WhatsApp API.</li>
+        </ul>
+
+
+        <h2>12. Governing Law and Dispute Resolution</h2>
+        <p>These Terms are governed by the laws of India. Any disputes arising out of these Terms shall be resolved through arbitration in accordance with the Arbitration and Conciliation Act, 1996, or in the courts of <strong>Thoothukudi District Court</strong>.</p>
+
+        <hr>
+
+        <h2>13. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the Software after the changes constitutes your acceptance of the revised Terms.</p>
+
+        <hr>
+
+        <h2>14. Contact Us</h2>
+        <p>If you have any questions or concerns about these Terms, please contact us at:</p>
+        <p>
+            8D, <strong>Arunachalam Pettai</strong> Street, <br>
+            <strong>Kovilpatti, Tuticorin Dist</strong>, Tamil Nadu <br>
+            India
+        </p>
+        <p><strong>Phone:</strong> +91 76666 28000</p>
+        <p><strong>Email:</strong> sazsapps@gmail.com</p>
     </div>
-</body>
-</html>
+</div>
+    <script>
+        const contentData = {
+            terms: `
+                <h1>Terms and Conditions</h1>
+        <p>
+            These Terms and Conditions govern your use of the ERP Billing Software provided by our company.
+            By accessing or using the Software, you agree to be bound by these Terms. If you do not agree 
+            to these Terms, you may not use the Software.
+        </p>
+
+         
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By using our ERP Billing Software, you confirm that:</p>
+        <ul>
+            <li>You are at least 18 years old or have the legal capacity to enter into a binding agreement.</li>
+            <li>You have read, understood, and agree to these Terms.</li>
+            <li>You are authorized to use the Software on behalf of your business (if applicable).</li>
+        </ul>
+
+         
+
+        <h2>2. License to Use the Software</h2>
+        <h3>2.1 Grant of License</h3>
+        <p>
+            We grant you a limited, non-exclusive, non-transferable license to use the ERP Billing Software 
+            for your business operations, specifically tailored for quarries and crushers.
+        </p>
+
+        <h3>2.2 Restrictions</h3>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Copy, modify, or distribute the Software without our prior written consent.</li>
+            <li>Reverse engineer, decompile, or disassemble the Software.</li>
+            <li>Use the Software for any illegal or unauthorized purpose.</li>
+            <li>Share your login credentials with unauthorized users.</li>
+        </ul>
+
+         
+
+        <h2>3. Account Registration</h2>
+        <h3>3.1 Account Creation</h3>
+        <p>
+            To use the Software, you must create an account by providing accurate and complete information, 
+            including your business name, contact details, and payment information.
+        </p>
+
+        <h3>3.2 Account Security</h3>
+        <p>
+            You are responsible for maintaining the confidentiality of your account credentials and for all 
+            activities that occur under your account. Notify us immediately of any unauthorized use or 
+            security breach.
+        </p>
+
+         
+
+        <h2>4. Payment Terms</h2>
+        <h3>4.1 Fees</h3>
+        <p>
+            The use of the ERP Billing Software may require payment of subscription fees, which will be 
+            clearly stated on our website or in your agreement with us.
+        </p>
+
+        <h3>4.2 Payment Methods</h3>
+        <p>
+            We accept payments via credit card, bank transfer, or other methods specified on our platform. 
+            All payments are processed securely through third-party payment gateways.
+        </p>
+
+        <h3>4.3 Refunds</h3>
+        <p>
+            Refunds are subject to our Refund Policy, which is available on our website or upon request.
+        </p>
+
+         
+
+        <h2>5. WhatsApp API Integration</h2>
+        <h3>5.1 Usage</h3>
+        <p>
+            The Software includes integration with the WhatsApp API to facilitate communication with your 
+            customers, suppliers, and other stakeholders. By using this feature, you agree to comply with 
+            WhatsApp's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+
+        <h3>5.2 User Consent</h3>
+        <p>
+            You are responsible for obtaining consent from individuals before sending them messages via WhatsApp. 
+            You must also comply with all applicable laws and regulations related to electronic communications.
+        </p>
+                <h3>5.3 Prohibited Activities</h3>
+        <p>
+            You may not use the WhatsApp API to:
+        </p>
+        <ul>
+            <li>Send spam, unsolicited messages, or promotional content without consent.</li>
+            <li>Harass, threaten, or defraud any individual or entity.</li>
+            <li>Violate any third-party rights or applicable laws.</li>
+        </ul>
+
+        <hr>
+
+        <h2>6. Data Ownership and Privacy</h2>
+        <h3>6.1 Your Data</h3>
+        <p>
+            You retain ownership of all data you input into the Software, including business information, transaction records, and customer details.
+        </p>
+
+        <h3>6.2 Our Use of Data</h3>
+        <p>
+            We may use anonymized and aggregated data to improve the Software, develop new features, and conduct analytics. For more details, please refer to our Privacy Policy.
+        </p>
+
+        <hr>
+
+        <h2>7. Intellectual Property</h2>
+        <h3>7.1 Ownership</h3>
+        <p>
+            All intellectual property rights in the Software, including but not limited to copyrights, trademarks, and patents, are owned by our company or its licensors.
+        </p>
+
+        <h3>7.2 Restrictions</h3>
+        <p>
+            You may not use our trademarks, logos, or branding without our prior written consent.
+        </p>
+        ` ,
+            privacy: `
+                <h1>Privacy Policy</h1>
+                <p>We value your privacy and are committed to protecting your personal data...</p>` ,
+            security: `
+                <h1>Security and Compliance</h1>
+                <p>Our security practices are designed to ensure the safety and privacy of your data...</p>` ,
+            policies: `
+                <h1>Policies</h1>
+                <p>Our policies outline our commitments to ethical business practices...</p>`
+        };
+
+        function showContent(page) {
+            const contentArea = document.getElementById('content-area');
+            const buttons = document.querySelectorAll('.three');
+
+            contentArea.innerHTML = contentData[page];
+            
+            buttons.forEach(btn => {
+                const isActive = btn.textContent.toLowerCase() === page;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-expanded', isActive);
+            });
+        }
+    </script>
+
+
+<footer class="footer">
+    
+        <img src="../assets/logo/sazsapps logo wht.png" alt="sazs Logo">
+        <!-- <footer class="a">
+    <div class="b">
+        <a href="https://twitter.com" target="_blank" class="c" rel="noopener">
+           <img src="../assets/content images/twitter_5968830.png" alt="Twitter" class="d">
+          </a>
+        <a href="https://www.facebook.com/profile.php?id=100075849583725&mibextid=ZbWKwL" target="_blank" class="c"rel="noopener">
+          <img src="../assets/content images/facebook.svg" alt="Facebook" class="d">
+        </a>
+        <a href="https://youtube.com/@sazsapps?si=0CPqHj-h-GcEJaNI" target="_blank" class="c"rel="noopener">
+          <img src="../assets/content images/youtube_1384060.png" alt="YouTube" class="d">
+        </a>
+        <a href="https://in.linkedin.com/" target="_blank" class="c"rel="noopener">
+          <img src="../assets/content images/LinkedIn_icon.svg" alt="LinkedIn" class="d">
+        </a>
+        <a href="https://www.instagram.com/sazs_apps?igsh=cmN6YnA2eWNmdGsy" target="_blank" class="c"rel="noopener">
+          <img src="../assets/content images/instagram.svg" alt="Instagram" class="d">
+        </a>
+      </div>
+
+
+     
+      <div class="e">
+        <a href="../../index.html" class="f">Home</a>
+        <a href="./aboutus.html" class="f">About Us</a>
+        <a href="./Features.html" class="f">Features</a>
+        <a href="./careers.html" class="f">Careers</a>
+        <a href="./contact.html" class="f">Contact Us</a>
+        <a href="#" class="f">Terms of Service</a>
+        
+      </div>
+      </footer> -->
+    <div>© 2025, Sazs Apps Pvt. Ltd. All Rights Reserved.</div>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+  </footer>
+
+<script>
+    // Scroll to top functionality
+    document.querySelector('.scroll-top').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Show/hide scroll button based on scroll position
+    window.addEventListener('scroll', () => {
+        const scrollButton = document.querySelector('.scroll-top');
+        if (window.scrollY > 200) {
+            scrollButton.style.display = 'flex';
+        } else {
+            scrollButton.style.display = 'none';
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.2, // Trigger animation when 20% of the element is visible
+        };
+
+        const animatedElements = document.querySelectorAll(".fade-in, .slide-in, .zoom-in");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach((el) => observer.observe(el));
+    });
+</script>
+
 
     </body>
     </html>

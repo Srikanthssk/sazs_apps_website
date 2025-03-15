@@ -321,7 +321,7 @@ a:hover {
 }
 
 .carousel-item:nth-child(1) .slide-img {
-    width: 80% !important;  /* Adjust width as needed */
+    width: 75% !important;  /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto; /* Center the image */
     display: block;
