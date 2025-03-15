@@ -272,7 +272,7 @@ a:hover {
     justify-content: space-between !important;
     align-items: center !important;
     padding: 20px 70px !important;
-    margin: 20px 100px !important;
+    margin: 20px 50px !important;
 
 }
 /* Text Styling */
@@ -359,7 +359,7 @@ a:hover {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(255, 252, 252, 0.6);
+    background-color: rgba(15, 15, 15, 0.6);
     border-radius: 50%;
 }
 .carousel-control-next-icon,
