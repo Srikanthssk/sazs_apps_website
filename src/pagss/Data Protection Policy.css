@@ -77,7 +77,7 @@ a:hover {
 
 /* Active link (adds underline) */
 .nav-link.active {
-    border-bottom: 2px solid #0b0d1f; /* Change color as needed */
+   border-bottom: 3px solid #3E89EC; /* Change color as needed */
     font-weight: bold;
 }
 
@@ -110,20 +110,17 @@ a:hover {
 }
 
 /* Side Navigation */
-
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 999; /* Higher z-index to overlap other content */
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 1); /* Fully opaque black */
     overflow-x: hidden;
     transition: 0.5s;
-    /* padding-top: 60px; */
 }
-
 .closebtn{
     padding-left: 220px !important;
 }
@@ -308,18 +305,7 @@ a:hover {
     overflow-y: auto;
 }
 
-  /* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-
+  
 .container {
     display: flex;
     height: 100vh;
@@ -426,6 +412,82 @@ hr {
     }
 }
 
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .one {
+        width: 160px;
+        padding: 15px;
+        display: none;
+    }
+    .four {
+        margin-left: 160px;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .one {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .four {
+        margin-left: 0;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .three {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .one {
+        padding: 10px;
+        display: none;
+    }
+    .four {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    p, li {
+        font-size: 12px;
+    }
+}
 
 
 

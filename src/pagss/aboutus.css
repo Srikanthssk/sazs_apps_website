@@ -84,7 +84,7 @@ a:hover {
 
 /* Active link (adds underline) */
 .nav-link.active {
-    border-bottom: 2px solid #0b0d1f; /* Change color as needed */
+    border-bottom: 3px solid #3E89EC; /* Change color as needed */
     font-weight: bold;
 }
 
@@ -316,7 +316,7 @@ a:hover {
   }
   
   .content {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     margin-top: 20px;
@@ -342,7 +342,7 @@ a:hover {
 
   @media screen and (max-width: 600px) {
   .illustration img {
-    margin-left: 85px;
+    margin-left: 70px;
     
     max-width: 56%;
     height: auto;

@@ -84,7 +84,7 @@ a:hover {
 
 /* Active link (adds underline) */
 .nav-link.active {
-    border-bottom: 2px solid #0b0d1f; /* Change color as needed */
+    border-bottom: 3px solid #3E89EC; /* Change color as needed */
     font-weight: bold;
 }
 .header-bar-nav a {

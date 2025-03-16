@@ -84,7 +84,7 @@ a:hover {
 
 /* Active link (adds underline) */
 .nav-link.active {
-    border-bottom: 2px solid #0b0d1f; /* Change color as needed */
+    border-bottom: 3px solid #3E89EC; /* Change color as needed */
     font-weight: bold;
 }
 .header-bar-nav a {
@@ -192,17 +192,17 @@ a:hover {
 
 
 .contact-us-section {
-    display: flex;
+    /* display: table; */
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 70px;
-    margin: 20px 100px;
+    margin: 20px 10px;
     gap: 30px;
 }
 
 .contact-info {
     flex: 1;
-    max-width: 40%;
+    /* max-width: 40%; */
     background-color: #fff;
     padding: 40px;
     border-radius: 15px;

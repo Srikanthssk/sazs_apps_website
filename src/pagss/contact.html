@@ -16,7 +16,7 @@
   
     <div class="header-nav">
         <div class="logo-container">
-            <img src="../assets/logo/sazs apps logo grey.png"  alt="company logo">
+            <img src="../assets/content images/sazs logo.svg"  alt="company logo">
         </div>
         <nav class="header-bar-nav">
             <a href="../../index.html" class="nav-link" data-page="index">Home</a>
@@ -149,7 +149,14 @@
             dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         }
     </script>
-    
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                emailjs.init("42LBzyIyKIVI31Bzv"); // Replace with your EmailJS Public Key
+            });
+        </script>
+    </head>
+    <body>
         <div class="contact-us-section zoom-in">
             <div class="contact-info">
                 <p class="section-subtitle">CONTACT US</p>
@@ -157,56 +164,85 @@
                 <p class="section-description">
                     Our team is happy to answer all your queries. Fill out the form and we will reach out to you as soon as possible!
                 </p>
-            </div>
-            <div class="contact-form ">
-                <div class="tabs">
-                    <button class="tab active">The field is required mark as </button>
-                   
+            
+           
+        
+        <div class="contact-us-section">
+            <div class="tabs">
+            <button class="tab active">The field is required mark as </button>
+        </div>
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="first-name">First name <span>*</span></label>
+                        <input type="text" id="first-name" name="first_name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="last-name">Last name <span>*</span></label>
+                        <input type="text" id="last-name" name="last_name" placeholder="Enter your surname" required>
+                    </div>
                 </div>
-                <form>
-                    <div class="form-group zoom-in ">
-                        <div class="form-field zoom-in">
-                            <label for="first-name ">First name <span>*</span></label>
-                            <input type="text" id="first-name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-field zoom-in">
-                            <label for="last-name">Last name <span>*</span></label>
-                            <input type="text" id="last-name" placeholder="Enter your surname" required>
-                        </div>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                     </div>
-                    <div class="form-group zoom-in">
-                        <div class="form-field zoom-in">
-                            <label for="email">Email <span>*</span></label>
-                            <input type="email" id="email" placeholder="example@gmail.com" required>
-                        </div>
-                        <div class="form-field zoom-in">
-                            <label for="phone-number zoom-in">Phone number <span>*</span></label>
-                            <input type="tel" id="phone-number" placeholder="+91 000 000 000" required>
-                        </div>
+                    <div class="form-field">
+                        <label for="phone-number">Phone number <span>*</span></label>
+                        <input type="tel" id="phone-number" name="phone" placeholder="+91 000 000 000" required>
                     </div>
-                    <div class="form-group zoom-in">
-                        <div class="form-field zoom-in">
-                            <label for="company-name">Company name</label>
-                            <input type="text" id="company-name" placeholder="Enter your company name">
-                        </div>
-                        <div class="form-field zoom-in">
-                            <label for="gst-number">GST number</label>
-                            <input type="text" id="gst-number" placeholder="Enter GST number">
-                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="company-name">Company name</label>
+                        <input type="text" id="company-name" name="company_name" placeholder="Enter your company name">
                     </div>
-                    <div class="form-field full-width zoom-in">
-                        <label for="message">Message <span>*</span></label>
-                        <textarea id="message" rows="4" placeholder="Leave here your message" required></textarea>
+                    <div class="form-field">
+                        <label for="gst-number">GST number</label>
+                        <input type="text" id="gst-number" name="gst_number" placeholder="Enter GST number">
                     </div>
-                    <div class="form-footer zoom-in">
-                        <p class="privacy-policy zoom-in">
-                            *I confirm that I have read and accepted Sazs Apps Pvt. Ltd <a href="../pagss/Terms of Service.html">Privacy Policy</a>.
-                        </p>
-                        <button type="submit" class="submit-button">Send message</button>
-                    </div>
-                </form>
+                </div>
+                <div class="form-field full-width">
+                    <label for="message">Message <span>*</span></label>
+                    <textarea id="message" name="message" rows="4" placeholder="Leave here your message" required></textarea>
+                </div>
+                <!-- Checkbox Section -->
+            <div class="form-footer" style="margin-top: 10px;margin-bottom: 10px;">
+                <label >
+                    <input type="checkbox" id="confirm-checkbox">
+                    *I confirm that I have read and accepted Sazs Apps Pvt. Ltd <a href="../pagss/Terms of Service.html" >Privacy Policy</a>.
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-button" class="submit-button" disabled>Send message</button>
+        </form>
+    </div>
             </div>
         </div>
+
+    <script>
+        document.getElementById("confirm-checkbox").addEventListener("change", function () {
+            document.getElementById("submit-button").disabled = !this.checked;
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_7bwsyfq", "template_9lt1ncc", this)
+            .then(function(response) {
+                alert("Message sent successfully!");
+                console.log("EmailJS Response:", response);
+                document.getElementById("contact-form").reset();
+            document.getElementById("submit-button").disabled = true;
+            })
+            .catch(function(error) {
+                alert("Failed to send message. Please try again.");
+                console.error("EmailJS Error:", error);
+            });
+        });
+    </script>
         
 
         <div class="contact-details-section fade-in">
@@ -245,7 +281,7 @@
     <footer class="footer-container fade-in">
         <div class="footer-content">
             <h1 class="heading zoom-in">We're Growing!</h1>
-            <a href="./contact.html" class="join-button">Join us</a>
+            <a href="./contact.html" class="join-button">Contact Us</a>
 <!-- 
             <div class="social-links">
                 <a href="#" class="linkedin-icon">
