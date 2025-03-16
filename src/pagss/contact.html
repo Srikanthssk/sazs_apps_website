@@ -221,29 +221,52 @@
     </div>
             </div>
         </div>
+        <!-- Popup Message -->
+<div id="popupa-message" class="popupa">
+    <p> Thanks for visiting us</p>
+    <img src="../assets/content images/High5.gif" alt="Success" class="popupa-image">
+    <p>We will get back you soon!</p>
+</div>
 
-    <script>
-        document.getElementById("confirm-checkbox").addEventListener("change", function () {
-            document.getElementById("submit-button").disabled = !this.checked;
-        });
+<!-- Styles -->
 
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
+<script>
+    document.getElementById("confirm-checkbox").addEventListener("change", function () {
+        document.getElementById("submit-button").disabled = !this.checked;
+    });
 
-            emailjs.sendForm("service_7bwsyfq", "template_9lt1ncc", this)
-            .then(function(response) {
-                alert("Message sent successfully!");
-                console.log("EmailJS Response:", response);
-                document.getElementById("contact-form").reset();
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Show popup
+        var popupa = document.getElementById("popupa-message");
+        popupa.classList.add("show");
+
+        // Send form via EmailJS
+        emailjs.sendForm("service_7bwsyfq", "template_9lt1ncc", this)
+        .then(function(response) {
+            console.log("EmailJS Response:", response);
+            document.getElementById("contact-form").reset();
             document.getElementById("submit-button").disabled = true;
-            })
-            .catch(function(error) {
-                alert("Failed to send message. Please try again.");
-                console.error("EmailJS Error:", error);
-            });
+
+            // Hide popup after 5 seconds
+            setTimeout(function() {
+                popupa.classList.add("hide");
+                setTimeout(() => popupa.classList.remove("show", "hide"), 500);
+            }, 500);
+        })
+        .catch(function(error) {
+            console.error("EmailJS Error:", error);
+
+            // Hide popup after 5 seconds even if there's an error
+            setTimeout(function() {
+                popupa.classList.add("hide");
+                setTimeout(() => popupa.classList.remove("show", "hide"), 500);
+            }, 500);
         });
-    </script>
-        
+    });
+</script>
+
 
         <div class="contact-details-section fade-in">
             <div class="contact-heading">

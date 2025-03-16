@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Nunito", sans-serif !important;
+    font-family: "Nunito", sans-serif ,  !important;
     background-color: rgb(255, 255, 253);
     color: #333;
 }
@@ -30,6 +30,11 @@ a:hover {
     padding: 10px 20px !important;
     border-bottom: 1px solid #ddd !important;
     transition: top 0.3s, transform 0.3s !important; /* Smooth transition for both top and transform properties */
+
+
+    
+       
+    
 }
 
 /* Hides the header when scrolling down */
@@ -115,13 +120,23 @@ a:hover {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 999; /* Higher z-index to overlap other content */
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 1); /* Fully opaque black */
     overflow-x: hidden;
     transition: 0.5s;
-    /* padding-top: 60px; */
+
+
+
+    position: fixed;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 1); /* Fully opaque black */
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1100 !important; /* Higher than header-nav to prevent overlap */
+
 }
 
 .closebtn{
@@ -313,7 +328,7 @@ a:hover {
 }
 
 .carousel-control-next-icon {
-    background-color: rgb(253, 249, 249) !important;
+    background-color: rgb(27, 49, 174) !important;
 }
 /* Carousel Controls - Adjusted as Requested */
 .carousel-control-prev {
@@ -359,16 +374,21 @@ a:hover {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(15, 15, 15, 0.6);
+    background-color: #333!important;
     border-radius: 50%;
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
+    
+    background-color: #333!important;
     display: inline-block;
     width: 20px;
     height: 20px;
     
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

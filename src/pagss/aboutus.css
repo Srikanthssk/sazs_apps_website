@@ -182,6 +182,15 @@ a:hover {
     color: white !important;
     display: block;
     transition: 0.3s;
+
+    position: fixed;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 1); /* Fully opaque black */
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1100 !important; /* Higher than header-nav to prevent overlap */
+
 }
 
 .sidenav a:hover {
